@@ -1,0 +1,38 @@
+/* You can add global styles to this file, and also import other style files */
+/* Reset padding and margin for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full height on HTML and Body */
+html, body {
+  height: 100%;
+  width: 100%;
+  /* Try temporarily commenting out overflow-x if needed */
+  /* overflow-x: hidden; */
+  /* scroll-behavior: smooth; */ /* Comment out if smooth scrolling causes issues */
+}
+
+/* Global body styles */
+body {
+  background-color: #000000;
+  color: #fff;
+  overflow-y: scroll; /* Ensures vertical scroll bar always appears */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  body {
+    font-size: 0.9em;
+  }
+}
+.form-floating > label {
+  display: block;
+  margin-bottom: 0.5rem; /* or any other style */
+}
+
+

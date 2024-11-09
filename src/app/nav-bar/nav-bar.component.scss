@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    background-color: #000000; /* Black background for night sky */
+    overflow: hidden;
+  }
+  li{
+    color: aliceblue;
+   pointer-events: fill;
+  }
+  .container-fluid{
+    box-shadow: 10px 10px 10px -10px rgb(255, 255, 255);
+  }
+  
+    .navbar-brand img {
+    width: 80px;
+  }
+  .navbar-nav {
+    align-items: center;
+   
+  }
+  .navbar .navbar-nav .nav-link {
+    color: #ffffff;
+    font-size: 1.1em;
+    padding: 0.5em 1em;
+    
+  }
+  @media screen and (min-width: 768px) {
+    .navbar-brand img {
+      width: 100px;
+    }
+    .navbar-brand {
+      margin-right: 0;
+      padding: 0 1em;
+    }
+  }
+  
+  

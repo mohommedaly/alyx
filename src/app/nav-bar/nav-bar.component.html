@@ -1,0 +1,45 @@
+<nav class="navbar navbar-expand-md navbar-dark text-light">
+  <div class="container-fluid">
+    <!-- Logo outside the list for small screens -->
+    <a class="navbar-brand d-md-none" routerLink="/home" (click)="smoothScroll('home')">
+      <img src="../../assets/images/Aly (1)-Photoroom.png "alt="Logo" width="100" height="auto">
+    </a>
+    
+    <!-- Toggler for mobile view -->
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <!-- Collapsible navbar links -->
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav mx-auto"> <!-- mx-auto ensures nav items are centered -->
+        <!-- Logo inside the navbar list for larger screens -->
+       
+
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/home" (click)="smoothScroll('home')">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/about" (click)="smoothScroll('about')">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/contact" (click)="smoothScroll('contact')">Contact</a>
+        </li>
+        <li class="nav-item d-none d-md-block">
+          <a class="navbar-brand" routerLink="/home" (click)="smoothScroll('home')">
+            <img src="../../assets/images/Aly (1)-Photoroom.png" alt="Logo" width="100" height="auto">
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/skills" (click)="smoothScroll('skills')">Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/artworks" (click)="smoothScroll('artworks')">Artworks</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="/projects" (click)="smoothScroll('projects')">Projects</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

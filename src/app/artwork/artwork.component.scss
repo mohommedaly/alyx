@@ -1,0 +1,151 @@
+/* Reset padding and margin for all elements */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full height on HTML and Body */
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal overflow */
+}
+
+/* Global body styles */
+body {
+  background-color: #000000;
+  color: #fff;
+  min-height: 100vh;
+  overflow-y: scroll; /* Ensures vertical scroll bar always appears */
+}
+
+/* Heading styles */
+.heading {
+  text-align: center;
+  font-size: 2.0em;
+  letter-spacing: 1px;
+  padding: 40px;
+  color: white;
+}
+
+h1 {
+  text-align: center;
+  margin: 0 auto;
+  padding: 40px 0;
+  font: 300 60px 'Oswald', sans-serif;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 6px;
+}
+
+/* Gallery styles */
+.gallery-image {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers images horizontally */
+  align-items: center; /* Vertically centers images */
+}
+
+/* img-box for individual image container */
+.img-box {
+  box-sizing: content-box;
+  margin: 10px;
+  height: auto; /* Make the box height auto for responsiveness */
+  width: 100%; /* Make the image box take up full width on small screens */
+  max-width: 350px; /* Limit the max width of images */
+  overflow: hidden;
+  display: inline-block;
+  color: white;
+  position: relative;
+  background-color: white;
+  text-align: center; /* Ensures text in the box is centered */
+}
+
+/* Responsive gallery images */
+.gallery-image img {
+  height: auto; /* Make the image responsive */
+  width: 100%; /* Make the image take the full width of the container */
+  transform: scale(1.0);
+  transition: transform 0.4s ease;
+}
+
+/* Hover effect for img-box */
+.img-box:hover img { 
+  transform: scale(1.1);
+}
+
+.img-box:hover .transparent-box {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Caption styles */
+.caption {
+  position: absolute;
+  bottom: 5px;
+  left: 20px;
+  opacity: 0.0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.transparent-box {
+  height: 100%;
+  width: 350px;
+  background-color: rgba(0, 0, 0, 0);
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover effect on caption */
+.img-box:hover .caption {
+  transform: translateY(-20px);
+  opacity: 1.0;
+}
+
+.img-box:hover {
+  cursor: pointer;
+}
+
+/* Caption text styling */
+.caption > p:nth-child(2) {
+  font-size: 0.8em;
+}
+
+.opacity-low {
+  opacity: 0.5;
+}
+
+/* Media query for small screens (like mobile) */
+@media (max-width: 600px) {
+  /* Ensure gallery images are centered */
+  .gallery-image {
+    padding: 10px; /* Reduce padding for smaller screens */
+  }
+
+  /* Ensure img-box is responsive on smaller screens */
+  .img-box {
+    width: 100%; /* Take up full width on small screens */
+    max-width: none; /* Remove the max-width constraint */
+  }
+
+  /* Ensure images are responsive on small screens */
+  .gallery-image img {
+    width: 100%; /* Image takes the full width of the container */
+  }
+}
+
+/* Optional: For very small screens (extra mobile devices) */
+@media (max-width: 480px) {
+  .gallery-image {
+    padding: 5px; /* Even smaller padding */
+  }
+
+  .img-box {
+    width: 100%; /* Ensure full width on very small screens */
+  }
+}
